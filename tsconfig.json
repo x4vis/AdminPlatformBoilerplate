@@ -21,12 +21,27 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@src/*": [
+        "src/*"
+      ],
+      "@core": [
+        "src/app/core/*"
+      ],
+      "@infrastrucutre": [
+        "src/app/infrastrucutre/*"
+      ],
+      "@presentation": [
+        "src/app/presentation/*"
+      ],
+    },
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "fullTemplateTypeCheck": true,
   }
 }
