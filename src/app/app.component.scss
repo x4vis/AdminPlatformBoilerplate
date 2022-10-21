@@ -1,0 +1,18 @@
+@use 'src/app/presentation/styles/index' as styles;
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.4;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+}
