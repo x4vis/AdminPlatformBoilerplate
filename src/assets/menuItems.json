@@ -1,0 +1,96 @@
+[
+  {
+    "name": "Estadísticas",
+    "icon": "FundProjectionScreenOutlined",
+    "submenu": [
+      {
+        "route": "/admin/ventas",
+        "name": "Ventas",
+        "icon": "FundProjectionScreenOutlined"
+      }
+    ]
+  },
+  {
+    "name": "Personal",
+    "icon": "UserOutlined",
+    "submenu": [
+      {
+        "route": "/admin/usuarios",
+        "name": "Usuarios",
+        "icon": "UserOutlined"
+      },
+      {
+        "route": "/admin/clientes",
+        "name": "Clientes",
+        "icon": "UserOutlined"
+      },
+      {
+        "route": "/admin/proveedores",
+        "name": "Proveedores",
+        "icon": "UserOutlined"
+      }
+    ]
+  },
+  {
+    "name": "Catalogos",
+    "icon": "BookOutlined",
+    "submenu": [
+      {
+        "route": "/admin/categorias",
+        "name": "Categorias",
+        "icon": "BookOutlined"
+      },
+      {
+        "route": "/admin/subcategorias",
+        "name": "SubCategorias",
+        "icon": "BookOutlined"
+      },
+      {
+        "route": "/admin/unidades-medida",
+        "name": "Uni. de Medida",
+        "icon": "BookOutlined"
+      },
+      {
+        "route": "/admin/descuentos",
+        "name": "Descuentos",
+        "icon": "BookOutlined"
+      },
+      {
+        "route": "/admin/productos",
+        "name": "Productos",
+        "icon": "BookOutlined"
+      }
+    ]
+  },
+  {
+    "name": "Negocio",
+    "icon": "BankOutlined",
+    "submenu": [
+      {
+        "route": "/admin/ventas",
+        "name": "Ventas",
+        "icon": "BankOutlined"
+      },
+      {
+        "route": "/admin/pedidos",
+        "name": "Pedidos",
+        "icon": "BankOutlined"
+      },
+      {
+        "route": "/admin/compras",
+        "name": "Compras",
+        "icon": "BankOutlined"
+      },
+      {
+        "route": "/admin/gasto-producto",
+        "name": "Gasto Producto",
+        "icon": "BankOutlined"
+      },
+      {
+        "route": "/admin/devouluciones",
+        "name": "Devoluciones",
+        "icon": "BankOutlined"
+      }
+    ]
+  }
+]

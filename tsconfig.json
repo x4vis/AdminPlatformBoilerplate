@@ -18,6 +18,8 @@
     "importHelpers": true,
     "target": "es2020",
     "module": "es2020",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "lib": [
       "es2020",
       "dom"
@@ -26,13 +28,13 @@
       "@src/*": [
         "src/*"
       ],
-      "@core": [
+      "@core/*": [
         "src/app/core/*"
       ],
-      "@infrastrucutre": [
+      "@infrastrucutre/*": [
         "src/app/infrastrucutre/*"
       ],
-      "@presentation": [
+      "@presentation/*": [
         "src/app/presentation/*"
       ],
     },
