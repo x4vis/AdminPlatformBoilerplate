@@ -1,49 +1,6 @@
 .logo {
-    height: 3.2rem;
-    background: rgba(255, 255, 255, 0.2);
-    margin: 1.6rem;
-}
-
-.layout {
-    min-height: 100vh;
-}
-
-nz-sider {
-    overflow: auto;
-    height: 100%;
-    position: fixed;
-    left: 0;
-}
-
-.right-layout {
-    transition: margin 0.3s;
-}
-
-nz-header {
-    background: #fff;
-    padding: 0;
-}
-
-.trigger {
-    font-size: 1.4rem;
-    padding: 0 1.6rem;
-    cursor: pointer;
-    transition: color 0.3s;
-
-    &:hover {
-        color: #1890ff;
-    }
-}
-
-nz-content {
-    margin: 2.4rem 1.6rem 0;
-}
-
-.inner-content {
-    padding: 2.4rem;
-    background: #fff;
-}
-
-nz-footer {
-    text-align: center;
+    background: white;
+    margin: 1.6rem auto;
+    border-radius: 100%;
+    box-shadow: 0 .1rem 2rem 0 rgba(168,168,168,0.75);
 }

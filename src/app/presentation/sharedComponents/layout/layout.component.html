@@ -1,35 +1,90 @@
 <nz-layout class="layout">
-    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-        <div class="logo"></div>
-        <ul nz-menu nzTheme="dark" nzMode="inline">
-            <li nz-menu-item>
-                <span nz-icon nzType="file"></span>
-                <span>nav 1</span>
-            </li>
-            <li nz-submenu nzTitle="User" nzIcon="user">
-                <ul>
-                    <li nz-menu-item>Tom</li>
-                    <li nz-menu-item>Bill</li>
-                    <li nz-menu-item>Alex</li>
-                </ul>
-            </li>
-        </ul>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+    <div
+      class="logo"
+      [ngStyle]="
+        isCollapsed
+          ? { height: '3rem', width: '3rem' }
+          : { height: '7rem', width: '7rem' }
+      "></div>
+    <ul nz-menu nzMode="inline">
+      <div class="w-100 d-flex justify-content-center mb-4">
+        <div>
+          <button
+            nz-button
+            nz-dropdown
+            nzType="link"
+            [nzDropdownMenu]="options"
+            nzPlacement="bottomLeft">
+            <span nz-icon nzType="ellipsis" class="fs-1"></span>
+          </button>
+          <nz-dropdown-menu #options="nzDropdownMenu">
+            <ul nz-menu>
+              <li
+                nz-menu-item
+                class="d-flex justify-content-center"
+                (click)="toggleTheme()">
+                <span nz-icon nzType="bg-colors" class="me-3"></span>
+                Change Theme
+              </li>
+              <li nz-menu-item>
+                <span
+                  nz-icon
+                  nzType="logout"
+                  nzTheme="outline"
+                  class="me-3"></span>
+                Cerrar sesión
+              </li>
+            </ul>
+          </nz-dropdown-menu>
+        </div>
+      </div>
+      <ng-container *ngFor="let menu of menuItems">
+        <li
+          *ngIf="!menu.submenu"
+          nz-menu-item
+          nzMatchRouter
+          nz-tooltip
+          nzTooltipPlacement="right"
+          [nzTooltipTitle]="isCollapsed ? menu.name : null">
+          <span nz-icon [nzType]="menu.icon"></span>
+          <span>{{ menu.name }}</span>
+        </li>
 
-    </nz-sider>
-    <nz-layout class="right-layout" [ngStyle]="{'margin-left': isCollapsed ? '5rem': '12.5rem'}">
-        <nz-header>
-            <span
-                class="trigger"
-                nz-icon
-                [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-                (click)="isCollapsed = !isCollapsed">
-            </span>
-        </nz-header>
-        <nz-content>
-            <div class="inner-content container-fluid">
-                <router-outlet></router-outlet>
-            </div>
-        </nz-content>
-        <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
-    </nz-layout>
+        <li
+          *ngIf="menu.submenu"
+          nz-submenu
+          [nzTitle]="menu.name"
+          [nzIcon]="menu.icon">
+          <ul>
+            <li
+              *ngFor="let submenu of menu.submenu"
+              [routerLink]="submenu.route"
+              nzMatchRouter
+              nz-menu-item>
+              {{ submenu.name }}
+            </li>
+          </ul>
+        </li>
+      </ng-container>
+    </ul>
+  </nz-sider>
+  <nz-layout
+    class="right-layout"
+    [ngStyle]="{ 'margin-left': isCollapsed ? '8rem' : '20rem' }">
+    <nz-header>
+      <span
+        class="trigger"
+        nz-icon
+        [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+        (click)="isCollapsed = !isCollapsed">
+      </span>
+    </nz-header>
+    <nz-content>
+      <div class="inner-content container-fluid">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+    <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
+  </nz-layout>
 </nz-layout>

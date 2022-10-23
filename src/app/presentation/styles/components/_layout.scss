@@ -1,0 +1,46 @@
+nz-layout.layout {
+  min-height: 100vh;
+
+  nz-sider {
+    overflow: auto;
+    height: 100%;
+    position: fixed;
+    left: 0;
+  }
+
+  nz-layout.right-layout {
+    transition: margin 0.2s;
+
+    nz-header {
+      padding: 0;
+    }
+
+    .trigger {
+      font-size: 2.3rem;
+      padding: 0 1.6rem;
+      cursor: pointer;
+      transition: color 0.3s;
+    
+      &:hover {
+          color: #1890ff;
+      }
+    }
+
+    nz-content {
+      margin: 2.4rem 1.6rem 0;
+
+      .inner-content {
+        padding: 2.4rem;
+      }
+    }
+    nz-footer {
+      text-align: center;
+    }
+  }
+}
+
+
+
+
+
+

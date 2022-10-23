@@ -1,0 +1,28 @@
+@use './abstract';
+@use './components';
+@use './elements';
+@use './utilities';
+@use './variables';
+
+html.default,
+html.dark {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  line-height: 1.4;
+}
+
+.default,
+.dark {
+  *,
+  ::after,
+  ::before {
+    box-sizing: inherit;
+  }
+
+  body {
+    margin: 0;
+    font-size: 1.6rem;
+  }
+}
+
+
