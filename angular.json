@@ -29,8 +29,18 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
-              "src/styles.scss"
+              "src/app/presentation/styles/styles.less",
+              {
+                "input": "src/app/presentation/styles/ngZorroThemes/default.less",
+                "bundleName": "default",
+                "inject": false
+              },
+              {
+                "input": "src/app/presentation/styles/ngZorroThemes/dark.less",
+                "bundleName": "dark",
+                "inject": false
+              },
+              "src/app/presentation/styles/styles.scss"
             ],
             "scripts": []
           },

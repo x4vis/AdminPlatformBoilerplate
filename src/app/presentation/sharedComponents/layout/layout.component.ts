@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItems } from '@src/app/core/model/types/menu-items.type';
+import { ThemeService } from '@core/helpers/theme.service';
+import { MenuItems } from '@core/model/types/menu-items.type';
 import menuItems from "src/assets/menuItems.json";
 
 @Component({
@@ -12,9 +13,13 @@ export class LayoutComponent implements OnInit {
   menuItems: MenuItems[] = menuItems;
   isCollapsed: boolean = false;
 
-  constructor() { }
+  constructor(private _themeService: ThemeService) { }
 
   ngOnInit(): void {
     // do something
+  }
+
+  toggleTheme(): void {
+    this._themeService.toggleTheme().then();
   }
 }

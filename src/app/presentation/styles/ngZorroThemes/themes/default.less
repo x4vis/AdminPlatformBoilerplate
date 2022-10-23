@@ -1,0 +1,27 @@
+@import (multiple) '../../../../../../node_modules/ng-zorro-antd/src/style/themes/default';
+@import './base';
+
+// -------- Colors -----------
+// >>> Primary
+@primary-color: @blue-8;
+@primary-color-hover: color(~`colorPalette('@{primary-color}', 5) `);
+@primary-color-active: color(~`colorPalette('@{primary-color}', 7) `);
+@primary-color-outline: fade(@primary-color, @outline-fade);
+
+// LAYOUT
+@layout-sider-background: @blue-2;
+@layout-header-background: @blue-2;
+@layout-trigger-background: @white;
+
+// MENU
+@menu-bg: @blue-2;
+@menu-popup-bg: @blue-4;
+@menu-inline-submenu-bg: @blue-3;
+@menu-highlight-color: @primary-color;
+
+// TOOLTIP
+@tooltip-bg: @blue-4;
+@tooltip-color: @black;
+
+// Dropdown
+@dropdown-menu-bg: @blue-3;
