@@ -1,17 +1,12 @@
 [
   {
-    "name": "Dashboard",
-    "icon": "line-chart"
+    "name": "dashboard",
+    "icon": "line-chart",
+    "route": "/dashboard"
   },
   {
-    "name": "Proveedores",
+    "name": "proveedores",
     "icon": "user",
-    "submenu": [
-      {
-        "route": "/admin/usuarios",
-        "name": "Usuarios",
-        "icon": "UserOutlined"
-      }
-    ]
+    "route": "/proveedores"
   }
 ]

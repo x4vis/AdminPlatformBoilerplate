@@ -7,6 +7,8 @@ import {
   LogoutOutline,
   EllipsisOutline,
   BgColorsOutline,
+  PlusCircleOutline,
+  InfoCircleOutline,
 } from '@ant-design/icons-angular/icons';
 
 export const ICONS: IconDefinition[] = [ 
@@ -17,4 +19,6 @@ export const ICONS: IconDefinition[] = [
   LogoutOutline,
   EllipsisOutline,
   BgColorsOutline,
+  PlusCircleOutline,
+  InfoCircleOutline,
 ];

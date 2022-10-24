@@ -44,25 +44,27 @@
           *ngIf="!menu.submenu"
           nz-menu-item
           nzMatchRouter
+          [routerLink]="menu.route"
           nz-tooltip
           nzTooltipPlacement="right"
           [nzTooltipTitle]="isCollapsed ? menu.name : null">
-          <span nz-icon [nzType]="menu.icon"></span>
-          <span>{{ menu.name }}</span>
+          <span nz-icon [nzType]="menu.icon || ''"></span>
+          <span>{{ menu.name | titlecase }}</span>
         </li>
 
         <li
           *ngIf="menu.submenu"
           nz-submenu
-          [nzTitle]="menu.name"
-          [nzIcon]="menu.icon">
+          [nzTitle]="menu.name | titlecase"
+          [nzIcon]="menu.icon || ''">
           <ul>
             <li
               *ngFor="let submenu of menu.submenu"
               [routerLink]="submenu.route"
               nzMatchRouter
               nz-menu-item>
-              {{ submenu.name }}
+              <span nz-icon [nzType]="submenu.icon || ''"></span>
+              <span>{{ submenu.name | titlecase }}</span>
             </li>
           </ul>
         </li>
