@@ -1,13 +1,33 @@
 import { Injectable } from '@angular/core';
+import { ThemeLsStoreFacadeService } from '../facades/store/ngrx/localstorage/theme-ls-store-facade.service';
 import { ThemeType } from '../model/enums/theme-type.enum';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ThemeService {
-  currentTheme = ThemeType.default;
+  currentTheme: string = '';
 
-  constructor() {}
+  constructor(private _themeLsStoreFacade: ThemeLsStoreFacadeService) {
+    this.setCurrentThemeFromStateLs();
+  }
+
+  private setCurrentThemeFromStateLs(): void {
+    this._themeLsStoreFacade.getCurrentTheme().subscribe({
+      next: (theme) => {
+        if (theme) {
+          this.currentTheme = theme;
+          return;
+        }
+
+        this.currentTheme = ThemeType.default;
+      }
+    })
+  }
+
+  private updateCurrentThemeStateLs(): void {
+    this._themeLsStoreFacade.setCurrentTheme(this.currentTheme);
+  }
 
   private reverseTheme(theme: string): ThemeType {
     return theme === ThemeType.dark ? ThemeType.default : ThemeType.dark;
@@ -35,6 +55,7 @@ export class ThemeService {
 
   public loadTheme(firstLoad = true): Promise<Event> {
     const theme = this.currentTheme;
+    this.updateCurrentThemeStateLs();
     if (firstLoad) {
       document.documentElement.classList.add(theme);
     }
