@@ -31,8 +31,8 @@
       "@core/*": [
         "src/app/core/*"
       ],
-      "@infrastrucutre/*": [
-        "src/app/infrastrucutre/*"
+      "@infrastructure/*": [
+        "src/app/infrastructure/*"
       ],
       "@presentation/*": [
         "src/app/presentation/*"
