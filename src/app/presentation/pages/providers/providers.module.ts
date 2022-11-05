@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProvidersComponent } from './providers.component';
+import { NgModule } from '@angular/core';
 import { ProvidersRoutingModule } from './providers-routing.module';
+import { ProvidersComponent } from './providers.component';
 
 @NgModule({
   declarations: [
@@ -9,7 +9,7 @@ import { ProvidersRoutingModule } from './providers-routing.module';
   ],
   imports: [
     CommonModule,
-    ProvidersRoutingModule,
+    ProvidersRoutingModule
   ]
 })
 export class ProvidersModule { }

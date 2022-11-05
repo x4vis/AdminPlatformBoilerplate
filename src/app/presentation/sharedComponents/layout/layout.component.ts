@@ -9,7 +9,6 @@ import menuItems from "src/assets/menuItems.json";
   styleUrls  : [ './layout.component.scss' ]
 })
 export class LayoutComponent {
-
   menuItems: MenuItems[] = menuItems;
   isCollapsed: boolean = false;
 
