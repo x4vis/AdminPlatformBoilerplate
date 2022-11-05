@@ -1,0 +1,17 @@
+@mixin min-width($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content
+  }
+}
+
+@mixin max-width($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content
+  }
+}
+
+@mixin between-width($min, $max) {
+  @media only screen and (min-width: $min) and (max-width: $max) {
+    @content
+  }
+}

@@ -1,0 +1,6 @@
+// The intention of this file is just to encapsulate
+// media queries mixins and breakpoints variables do not
+// add any styles nor files unless it is really necessary
+
+@forward '../abstract/mixins/media-queries' as mq-*;
+@forward '../variables/breakpoints' as breakpoint-*;

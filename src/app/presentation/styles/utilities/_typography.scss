@@ -1,0 +1,44 @@
+@use './responsive' as *;
+
+// FONT SIZES
+$font-sizes: (
+  "12": '1.2',
+  "14": '1.4',
+  "16": '1.6',
+  "18": '1.8',
+  "20": '2',
+  "22": '2.2',
+  "24": '2.4',
+  "26": '2.6',
+  "28": '2.8',
+  "30": '3',
+  "32": '3.2',
+  "34": '3.4',
+  "36": '3.6',
+  "38": '3.8',
+  "40": '4',
+  "42": '4.2',
+  "46": '4.6',
+);
+
+$screen-sizes: (
+  "sm": $breakpoint-sm,
+  "md": $breakpoint-md,
+  "lg": $breakpoint-lg,
+  "xl": $breakpoint-xl,
+  "xxl": $breakpoint-xxl,
+);
+
+@each $font-name, $font-size in $font-sizes {
+  .fs-#{$font-name} {
+    font-size: #{$font-size}rem;
+  }
+
+  @each $screen-name, $screen-size in $screen-sizes {
+    @include mq-min-width($screen-size) {
+      .fs-#{$screen-name}-#{$font-name} {
+        font-size: #{$font-size}rem;
+      }
+    }
+  }
+}

@@ -1,8 +1,7 @@
-@use './abstract';
-@use './components';
-@use './elements';
-@use './utilities';
-@use './variables';
+@use 'abstract';
+@use 'components';
+@use 'elements';
+@use 'utilities';
 
 html.default,
 html.dark {
