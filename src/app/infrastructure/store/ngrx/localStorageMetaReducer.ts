@@ -8,8 +8,6 @@ export const reducersLS: ActionReducerMap<AppLsState> = {
   theme: themeLsReducer,
 }
 
-// const secureLsService = AppInjector.get(SecureLsService);
-
 function localStorageSyncReducer(reducer: ActionReducer<AppLsState>): ActionReducer<AppLsState> {
   return localStorageSync({
     keys     : [{ 'theme': { ...secureStore } }],
