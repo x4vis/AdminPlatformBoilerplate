@@ -9,6 +9,7 @@ import menuItems from "src/assets/menuItems.json";
   styleUrls  : [ './layout.component.scss' ]
 })
 export class LayoutComponent {
+  username: string = 'Username';
   menuItems: MenuItems[] = menuItems;
   isCollapsed: boolean = false;
 

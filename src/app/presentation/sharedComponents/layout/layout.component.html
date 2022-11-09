@@ -4,15 +4,20 @@
     [(nzCollapsed)]="isCollapsed"
     [nzTrigger]="null"
     [nzBreakpoint]="'md'">
-    <div
-      class="logo"
-      [ngStyle]="
-        isCollapsed
-          ? { height: '3rem', width: '3rem' }
-          : { height: '7rem', width: '7rem' }
-      "></div>
+    <div class="mx-auto user-info">
+      <div
+        class="logo"
+        [ngStyle]="
+          isCollapsed
+            ? { height: '3rem', width: '3rem' }
+            : { height: '7rem', width: '7rem' }
+        "></div>
+      <p>
+        {{ username | truncateText: 10 }}
+      </p>
+    </div>
     <ul nz-menu nzMode="inline">
-      <div class="w-100 d-flex justify-content-center mb-4">
+      <div class="w-100 d-flex justify-content-center mb-4 d-md-none">
         <div>
           <button
             nz-button
@@ -78,13 +83,64 @@
   <nz-layout
     class="right-layout"
     [ngStyle]="{ 'margin-left': isCollapsed ? '8rem' : '20rem' }">
-    <nz-header>
+    <nz-header class="d-flex justify-content-between align-items-center pe-5">
       <span
         class="trigger"
         nz-icon
         [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
         (click)="isCollapsed = !isCollapsed">
       </span>
+      <div class="d-none d-md-block">
+        <ng-container>
+          <button
+            nz-button
+            nz-dropdown
+            [nzDropdownMenu]="settings"
+            nzPlacement="bottomLeft"
+            [nzSize]="'large'"
+            nzType="text"
+            nzShape="circle"
+            class="me-3">
+            <span nz-icon nzType="setting"></span>
+          </button>
+          <nz-dropdown-menu #settings="nzDropdownMenu">
+            <ul nz-menu>
+              <li
+                nz-menu-item
+                class="d-flex justify-content-center"
+                (click)="toggleTheme()">
+                <span nz-icon nzType="bg-colors" class="me-3"></span>
+                Change Theme
+              </li>
+            </ul>
+          </nz-dropdown-menu>
+        </ng-container>
+
+        <ng-container>
+          <button
+            nz-button
+            nz-dropdown
+            [nzDropdownMenu]="userOptions"
+            nzPlacement="bottomLeft"
+            [nzSize]="'large'"
+            nzType="text"
+            nzShape="circle">
+            <span nz-icon nzType="user"></span>
+          </button>
+          <nz-dropdown-menu #userOptions="nzDropdownMenu">
+            <ul nz-menu>
+              <li nz-menu-item>
+                <span
+                  nz-icon
+                  nzType="logout"
+                  nzTheme="outline"
+                  class="me-3"></span>
+                Cerrar sesión
+              </li>
+            </ul>
+          </nz-dropdown-menu>
+        </ng-container>
+      </div>
     </nz-header>
     <nz-content>
       <div class="inner-content container-fluid">
