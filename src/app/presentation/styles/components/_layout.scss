@@ -1,3 +1,5 @@
+@use 'src/app/presentation/styles/variables/colors';
+
 nz-layout.layout {
   min-height: 100vh;
 
@@ -20,9 +22,9 @@ nz-layout.layout {
       padding: 0 1.6rem;
       cursor: pointer;
       transition: color 0.3s;
-    
+
       &:hover {
-          color: #1890ff;
+        color: colors.$blue-one;
       }
     }
 
@@ -38,9 +40,3 @@ nz-layout.layout {
     }
   }
 }
-
-
-
-
-
-

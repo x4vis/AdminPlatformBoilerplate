@@ -4,12 +4,7 @@ import { ProvidersRoutingModule } from './providers-routing.module';
 import { ProvidersComponent } from './providers.component';
 
 @NgModule({
-  declarations: [
-    ProvidersComponent
-  ],
-  imports: [
-    CommonModule,
-    ProvidersRoutingModule
-  ]
+  declarations: [ProvidersComponent],
+  imports: [CommonModule, ProvidersRoutingModule],
 })
-export class ProvidersModule { }
+export class ProvidersModule {}

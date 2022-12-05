@@ -3,7 +3,7 @@ import { environment } from '@src/environments/environment';
 import { EnvironmentProject } from '../model/types/environment-project.type';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EnvironmentService {
   get apiURL(): string {

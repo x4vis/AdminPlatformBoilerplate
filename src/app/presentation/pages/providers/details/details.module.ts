@@ -5,18 +5,13 @@ import { DetailsComponent } from './details.component';
 
 const routes: Routes = [
   {
-    path     : '',
-    component: DetailsComponent
-  }
-]
+    path: '',
+    component: DetailsComponent,
+  },
+];
 
 @NgModule({
-  declarations: [
-    DetailsComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-  ]
+  declarations: [DetailsComponent],
+  imports: [CommonModule, RouterModule.forChild(routes)],
 })
-export class DetailsModule { }
+export class DetailsModule {}

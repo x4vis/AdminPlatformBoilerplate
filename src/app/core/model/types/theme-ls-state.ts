@@ -1,3 +1,3 @@
 export type themeLsState = {
-  theme: string
-} 
+  theme: string;
+};

@@ -35,9 +35,7 @@
             "style": "kebab-case"
           }
         ],
-        "key-spacing": ["error", { "align": { "beforeColon": false, "afterColon": true, "on": "colon", "mode": "strict" }}],
         "arrow-body-style": ["error", "as-needed"],
-        "array-bracket-spacing": ["error", "always", { "objectsInArrays": false, "arraysInArrays": false }],
         "curly": "error",
         "import-spacing": 0,
         "max-classes-per-file": "error",

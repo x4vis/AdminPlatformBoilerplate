@@ -4,10 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ProvidersRepositoryService {
-
-  constructor() { }
+  constructor() {}
 
   grettingsFromProvidersRepository(): string {
-    return 'grettings from providers repositories'
+    return 'grettings from providers repositories';
   }
 }

@@ -1,18 +1,12 @@
-import { AppLsState } from '@core/model/types/app-ls-state';
-import { ActionReducer, ActionReducerMap, MetaReducer } from '@ngrx/store';
+import { ActionReducer } from '@ngrx/store';
 import { secureStore } from '@src/app/core/helpers/secure-store';
+import { AppLocalStorageState } from '@src/app/core/model/types/state/app-local-storage-state';
 import { localStorageSync } from 'ngrx-store-localstorage';
-import { themeLsReducer } from './reducers/localstorage/theme-ls.reducer';
 
-export const reducersLS: ActionReducerMap<AppLsState> = {
-  theme: themeLsReducer,
-}
-
-function localStorageSyncReducer(reducer: ActionReducer<AppLsState>): ActionReducer<AppLsState> {
-  return localStorageSync({
-    keys     : [{ 'theme': { ...secureStore } }],
+export const localStorageSyncReducer = (
+  reducer: ActionReducer<AppLocalStorageState>
+): ActionReducer<AppLocalStorageState> =>
+  localStorageSync({
+    keys: [{ theme: { ...secureStore } }],
     rehydrate: true,
   })(reducer);
-}
-
-export const metaReducersLS: MetaReducer<AppLsState, any>[] = [ localStorageSyncReducer ];

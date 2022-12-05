@@ -1,11 +1,18 @@
 import { IconDefinition } from '@ant-design/icons-angular';
 import {
-  BgColorsOutline, EllipsisOutline, InfoCircleOutline, LineChartOutline,
-  LogoutOutline, MenuFoldOutline,
-  MenuUnfoldOutline, PlusCircleOutline, SettingOutline, UserOutline
+  BgColorsOutline,
+  EllipsisOutline,
+  InfoCircleOutline,
+  LineChartOutline,
+  LogoutOutline,
+  MenuFoldOutline,
+  MenuUnfoldOutline,
+  PlusCircleOutline,
+  SettingOutline,
+  UserOutline,
 } from '@ant-design/icons-angular/icons';
 
-export const ICONS: IconDefinition[] = [ 
+export const ICONS: IconDefinition[] = [
   UserOutline,
   MenuFoldOutline,
   MenuUnfoldOutline,

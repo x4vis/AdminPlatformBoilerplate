@@ -9,14 +9,16 @@
         class="logo"
         [ngStyle]="
           isCollapsed
-            ? { height: '3rem', width: '3rem' }
+            ? { height: '4.5rem', width: '4.5rem' }
             : { height: '7rem', width: '7rem' }
         "></div>
       <p>
-        {{ username | truncateText: 10 }}
+        {{ username | truncateText: (isCollapsed ? 5 : 10) }}
       </p>
     </div>
-    <ul nz-menu nzMode="inline">
+    <ul
+      nz-menu
+      nzMode="inline">
       <div class="w-100 d-flex justify-content-center mb-4 d-md-none">
         <div>
           <button
@@ -25,7 +27,10 @@
             nzType="link"
             [nzDropdownMenu]="options"
             nzPlacement="bottomLeft">
-            <span nz-icon nzType="ellipsis" class="fs-1"></span>
+            <span
+              nz-icon
+              nzType="ellipsis"
+              class="fs-1"></span>
           </button>
           <nz-dropdown-menu #options="nzDropdownMenu">
             <ul nz-menu>
@@ -33,7 +38,10 @@
                 nz-menu-item
                 class="d-flex justify-content-center"
                 (click)="toggleTheme()">
-                <span nz-icon nzType="bg-colors" class="me-3"></span>
+                <span
+                  nz-icon
+                  nzType="bg-colors"
+                  class="me-3"></span>
                 Change Theme
               </li>
               <li nz-menu-item>
@@ -57,7 +65,9 @@
           nz-tooltip
           nzTooltipPlacement="right"
           [nzTooltipTitle]="isCollapsed ? menu.name : null">
-          <span nz-icon [nzType]="menu.icon || ''"></span>
+          <span
+            nz-icon
+            [nzType]="menu.icon || ''"></span>
           <span>{{ menu.name | titlecase }}</span>
         </li>
 
@@ -72,7 +82,9 @@
               [routerLink]="submenu.route"
               nzMatchRouter
               nz-menu-item>
-              <span nz-icon [nzType]="submenu.icon || ''"></span>
+              <span
+                nz-icon
+                [nzType]="submenu.icon || ''"></span>
               <span>{{ submenu.name | titlecase }}</span>
             </li>
           </ul>
@@ -101,7 +113,9 @@
             nzType="text"
             nzShape="circle"
             class="me-3">
-            <span nz-icon nzType="setting"></span>
+            <span
+              nz-icon
+              nzType="setting"></span>
           </button>
           <nz-dropdown-menu #settings="nzDropdownMenu">
             <ul nz-menu>
@@ -109,7 +123,10 @@
                 nz-menu-item
                 class="d-flex justify-content-center"
                 (click)="toggleTheme()">
-                <span nz-icon nzType="bg-colors" class="me-3"></span>
+                <span
+                  nz-icon
+                  nzType="bg-colors"
+                  class="me-3"></span>
                 Change Theme
               </li>
             </ul>
@@ -125,7 +142,9 @@
             [nzSize]="'large'"
             nzType="text"
             nzShape="circle">
-            <span nz-icon nzType="user"></span>
+            <span
+              nz-icon
+              nzType="user"></span>
           </button>
           <nz-dropdown-menu #userOptions="nzDropdownMenu">
             <ul nz-menu>

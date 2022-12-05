@@ -2,8 +2,8 @@ import { Injector, NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgZorroAppThemeInitializer } from '@core/helpers/ng-zorro-app-theme-initializer.service';
+import { metaReducers, reducers } from '@infrastructure/store/ngrx/metaReducer';
 import { StoreModule } from '@ngrx/store';
-import { metaReducersLS, reducersLS } from '@src/app/infrastructure/store/ngrx/localStorageMetaReducer';
 import { NZ_CONFIG } from 'ng-zorro-antd/core/config';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NG_ZORRO_CONFIG } from './utils/ng-zorro-config';
@@ -13,21 +13,18 @@ export let AppInjector: Injector;
 
 @NgModule({
   declarations: [],
-  imports     : [
+  imports: [
     NzIconModule.forRoot(ICONS),
-    StoreModule.forRoot(reducersLS, { metaReducers: metaReducersLS }),
+    StoreModule.forRoot(reducers, { metaReducers: metaReducers }),
   ],
   providers: [
     NgZorroAppThemeInitializer,
     { provide: NZ_CONFIG, useValue: NG_ZORRO_CONFIG },
   ],
-  exports: [
-    NzIconModule,
-    BrowserAnimationsModule,
-  ]
+  exports: [NzIconModule, BrowserAnimationsModule],
 })
-export class CoreModule { 
+export class CoreModule {
   constructor(private _injector: Injector) {
-    AppInjector= this._injector;
+    AppInjector = this._injector;
   }
 }

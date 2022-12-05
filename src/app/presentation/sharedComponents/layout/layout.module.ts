@@ -14,8 +14,16 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 
 @NgModule({
-  declarations: [ LayoutComponent, TruncateTextPipe ],
-  imports     : [ LayoutRoutingModule, CoreModule, NzLayoutModule, NzMenuModule, NzToolTipModule, NzDropDownModule, NzButtonModule ],
-  exports     : [ LayoutComponent ]
+  declarations: [LayoutComponent, TruncateTextPipe],
+  imports: [
+    LayoutRoutingModule,
+    CoreModule,
+    NzLayoutModule,
+    NzMenuModule,
+    NzToolTipModule,
+    NzDropDownModule,
+    NzButtonModule,
+  ],
+  exports: [LayoutComponent],
 })
-export class LayoutModule {};
+export class LayoutModule {}

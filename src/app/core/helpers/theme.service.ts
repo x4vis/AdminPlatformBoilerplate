@@ -14,15 +14,15 @@ export class ThemeService {
 
   private setCurrentThemeFromStateLs(): void {
     this._themeLsStoreFacade.getCurrentTheme().subscribe({
-      next: (theme) => {
+      next: theme => {
         if (theme) {
           this.currentTheme = theme;
           return;
         }
 
         this.currentTheme = ThemeType.default;
-      }
-    })
+      },
+    });
   }
 
   private updateCurrentThemeStateLs(): void {
@@ -61,14 +61,14 @@ export class ThemeService {
     }
     return new Promise<Event>((resolve, reject) => {
       this.loadCss(`${theme}.css`, theme).then(
-        (e) => {
+        e => {
           if (!firstLoad) {
             document.documentElement.classList.add(theme);
           }
           this.removeUnusedTheme(this.reverseTheme(theme));
           resolve(e);
         },
-        (e) => reject(e)
+        e => reject(e)
       );
     });
   }

@@ -1,7 +1,6 @@
-import { AppLsState } from "@core/model/types/app-ls-state";
-import { themeLsInitialState } from "./theme-ls.state";
+import { AppLocalStorageState } from '@src/app/core/model/types/state/app-local-storage-state';
+import { themeLsInitialState } from './theme-ls.state';
 
-export const appLsInitialState: AppLsState = {
-  theme: themeLsInitialState
+export const appLsInitialState: AppLocalStorageState = {
+  theme: themeLsInitialState,
 };
-
