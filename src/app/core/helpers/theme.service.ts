@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ThemeLsStoreFacadeService } from '../facades/store/ngrx/localstorage/theme-ls-store-facade.service';
+import { ThemeLsStoreFacadeService } from '../facades/store/ngrx/local-storage/theme-ls-store-facade.service';
 import { ThemeType } from '../model/enums/theme-type.enum';
 
 @Injectable({

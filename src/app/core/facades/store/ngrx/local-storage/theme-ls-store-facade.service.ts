@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { updateLsTheme } from '@infrastructure/store/ngrx/actions/localstorage/theme-ls.actions';
-import { selectLsTheme } from '@infrastructure/store/ngrx/selectors/localstorage/theme-ls.selector';
+import { selectLsTheme } from '@src/app/infrastructure/store/ngrx/selectors/local-storage/theme-ls.selector';
 import { Store } from '@ngrx/store';
+import { updateLsTheme } from '@src/app/infrastructure/store/ngrx/actions/local-storage/theme-ls.actions';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 

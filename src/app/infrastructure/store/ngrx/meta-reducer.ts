@@ -1,8 +1,8 @@
 import { ActionReducerMap, MetaReducer } from '@ngrx/store';
 import { AppState } from '@src/app/core/model/types/state/app-state';
-import { localStorageSyncReducer } from './localStorageMetaReducer';
-import { themeLsReducer } from './reducers/localstorage/theme-ls.reducer';
-import { sessionStorageSyncReducer } from './sessionStorageMetaReducer';
+import { localStorageSyncReducer } from './local-storage-meta-reducer';
+import { themeLsReducer } from './reducers/local-storage/theme-ls.reducer';
+import { sessionStorageSyncReducer } from './session-storage-meta-reducer';
 
 export const reducers: ActionReducerMap<AppState> = {
   theme: themeLsReducer,
