@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CoreModule } from '@src/app/core/core.module';
+import { CoreModule } from '@core/core.module';
 import { LayoutRoutingModule } from './layout-routing.module';
 
 import { LayoutComponent } from './layout.component';

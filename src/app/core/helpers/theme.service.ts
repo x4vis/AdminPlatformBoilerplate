@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ThemeLsStoreFacadeService } from '../facades/store/ngrx/local-storage/theme-ls-store-facade.service';
+import { ThemeStoreFacadeService } from '../facades/store/ngrx/local-storage/theme-store-facade.service';
 import { ThemeType } from '../model/enums/theme-type.enum';
 
 @Injectable({
@@ -8,12 +8,12 @@ import { ThemeType } from '../model/enums/theme-type.enum';
 export class ThemeService {
   currentTheme: string = '';
 
-  constructor(private _themeLsStoreFacade: ThemeLsStoreFacadeService) {
+  constructor(private _themeStoreFacade: ThemeStoreFacadeService) {
     this.setCurrentThemeFromStateLs();
   }
 
   private setCurrentThemeFromStateLs(): void {
-    this._themeLsStoreFacade.getCurrentTheme().subscribe({
+    this._themeStoreFacade.getCurrentTheme().subscribe({
       next: theme => {
         if (theme) {
           this.currentTheme = theme;
@@ -26,7 +26,7 @@ export class ThemeService {
   }
 
   private updateCurrentThemeStateLs(): void {
-    this._themeLsStoreFacade.setCurrentTheme(this.currentTheme);
+    this._themeStoreFacade.setCurrentTheme(this.currentTheme);
   }
 
   private reverseTheme(theme: string): ThemeType {

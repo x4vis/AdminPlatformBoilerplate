@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ThemeService } from '@core/helpers/theme.service';
 import { MenuItems } from '@core/model/types/menu-items.type';
-import menuItems from 'src/assets/menuItems.json';
+import menuItems from 'src/assets/menu-items.json';
 
 @Component({
   selector: 'app-layout',

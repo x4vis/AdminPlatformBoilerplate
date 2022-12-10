@@ -1,13 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-
-import { ThemeLsStoreFacadeService } from './theme-ls-store-facade.service';
+import { ThemeStoreFacadeService } from './theme-store-facade.service';
 
 describe('ThemeStoreFacadeService', () => {
-  let service: ThemeLsStoreFacadeService;
+  let service: ThemeStoreFacadeService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ThemeLsStoreFacadeService);
+    service = TestBed.inject(ThemeStoreFacadeService);
   });
 
   it('should be created', () => {

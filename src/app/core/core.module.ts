@@ -5,7 +5,7 @@ import { NgZorroAppThemeInitializer } from '@core/helpers/ng-zorro-app-theme-ini
 import {
   metaReducers,
   reducers,
-} from '@src/app/infrastructure/store/ngrx/meta-reducer';
+} from '@infrastructure/store/ngrx/meta-reducer';
 import { StoreModule } from '@ngrx/store';
 import { NZ_CONFIG } from 'ng-zorro-antd/core/config';
 import { NzIconModule } from 'ng-zorro-antd/icon';

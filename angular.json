@@ -31,12 +31,12 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/app/presentation/styles/styles.less",
               {
-                "input": "src/app/presentation/styles/ngZorroThemes/default.less",
+                "input": "src/app/presentation/styles/ng-zorro-themes/default.less",
                 "bundleName": "default",
                 "inject": false
               },
               {
-                "input": "src/app/presentation/styles/ngZorroThemes/dark.less",
+                "input": "src/app/presentation/styles/ng-zorro-themes/dark.less",
                 "bundleName": "dark",
                 "inject": false
               },
